@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.mandiri.core.base.BaseActivityVM
 import com.mandiri.test.R
 import com.mandiri.test.databinding.ActivityDetailMovieBinding
+import com.mandiri.test.ui.view.user_reviews.UserReviewsActivity
 import com.mandiri.test.ui.viewmodel.DetailMovieViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,6 +39,10 @@ class DetailMovieActivity:
         viewModel.apply {
             getDetailMovie(movieId)
             getVideosTrailer(movieId)
+        }
+
+        btnReviews.setOnClickListener {
+            UserReviewsActivity.showPage(this@DetailMovieActivity, movieId)
         }
     }
 

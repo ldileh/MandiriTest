@@ -16,9 +16,8 @@ class RemoteDataSource @Inject constructor(val service: RemoteService): BaseServ
         service.detailMovie(movieId = movieId)
     }
 
-    suspend fun movieReviews(page: Int, movieId: Int) = getResult {
+    suspend fun movieReviews(page: Int, movieId: Int) =
         service.movieReviews(page = page, movieId = movieId)
-    }
 
     suspend fun movieVideos(movieId: Int) = getResult {
         service.movieVideos(movieId = movieId)

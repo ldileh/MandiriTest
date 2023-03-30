@@ -17,6 +17,15 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
 
         <activity
+            android:name=".ui.view.user_reviews.UserReviewsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="@string/page_user_reviews"
+            android:parentActivityName=".ui.view.detail.DetailMovieActivity"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
             android:name=".ui.view.detail.DetailMovieActivity"
             android:exported="false"
             android:screenOrientation="portrait"
